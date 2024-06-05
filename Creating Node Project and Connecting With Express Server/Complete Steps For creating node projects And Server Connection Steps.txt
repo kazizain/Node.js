@@ -1,0 +1,71 @@
+Learn How To Create A server: 
+
+purpose: how to create a restfull Api using Express js.
+
+Step 1: Write npm init -y : use for command initializes a new Node.js project with default settings, automatically creating a package.json file.
+
+Step 2: npm i express: command installs the Express framework for Node.js, allowing you to create and manage web applications and APIs.
+
+Step 3: npm i nodemon: installs Nodemon, a utility that automatically restarts your Node.js application when file changes in the directory are detected.
+
+Step 4: need one file write echo > app.js : here we will write our Express code. provides a centralized entry point for application setup, configuration, and server initialization.
+
+Step 5: import express from express.
+
+step 6: creating and instance of express js.
+
+step 7: set the routes : 
+app.get("/",(req,res)=>{
+
+    res.send("Hi i am live");
+})
+like this.
+
+
+step 8: define port :const port = process.env.port // using to listen when hosting live. || or deinfe it by your self 5000 or any.
+
+
+
+
+step 9: Listen the server:  create function and call it like start();
+
+write the strat function before calling :
+const start = async() =>
+    {
+
+
+        try{
+
+            app.listen(port,()=>{
+                console.log('{$port} yes i am login');
+            });
+        }
+
+        catch(error){
+
+           console.log(error);
+        }
+
+
+    }
+
+
+step 10 : go to scripts : write start script : "start": "node app.js", file allows you to define a custom script named "start" that, when executed with npm start command, runs the Node.js application by starting the app.js file.
+
+
+step 11 : add : 'type' : 'module'; and also replace app.js with index.js.
+
+
+'Dev': 'nodemon app.js', use for  The "dev": "nodemon app.js" command in the scripts section of the package.json file is typically used during development to automatically restart the Node.js server whenever changes are made to the source code.
+
+When you run npm run dev in the terminal, it executes the nodemon package with the app.js file as the entry point. nodemon monitors the files in the directory for any changes. If a change is detected, it automatically restarts the Node.js server, allowing developers to see the changes reflected in real-time without manually restarting the server after each modification. This significantly speeds up the development process and improves productivity.
+
+
+npm start : use for starting server.
+npm run dev : use for check the cange and restrat the server if any change was made there.
+
+
+
+
+
+
